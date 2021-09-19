@@ -5,6 +5,7 @@ import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.coroutines.await
 import com.apollographql.apollo.coroutines.toDeferred
 import com.apollographql.apollo.exception.ApolloException
+import com.test.app.movies.Utils
 import com.test.app.movies.data.EndPoint
 import com.test.app.movies.data.apollo.AuthorizationInterceptor
 import com.test.app.movies.data.model.GetAllMoviesQuery
@@ -34,7 +35,7 @@ class DefaultRepository @Inject constructor(val apolloClient: ApolloClient) : Mo
             return Result.Error(response.errors?.first()?.message)
         }else{
             return Result.Success(launch.movies.edges?.map { Movie(it?.node?.id!!,it.node.title,
-                it.node.releaseDate as? String,it.node.seasons) })
+                Utils.changeServerDateToTime(it.node.releaseDate as? String),it.node.seasons?.toInt()) })
         }
 
     }

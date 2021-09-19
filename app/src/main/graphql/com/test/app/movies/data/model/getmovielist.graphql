@@ -1,0 +1,17 @@
+query getAllMovies{
+    movies{
+        pageInfo{
+            hasNextPage
+            hasPreviousPage
+        }
+        edges{
+            node{
+                id
+                title
+                releaseDate
+                seasons
+            }
+        }
+        count
+    }
+}

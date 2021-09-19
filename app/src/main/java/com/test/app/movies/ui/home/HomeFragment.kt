@@ -1,16 +1,13 @@
-package com.target.app.movies.ui.home
+package com.test.app.movies.ui.home
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.target.app.movies.R
-import com.target.app.movies.ui.movielist.MovieListFragment
+import com.test.app.movies.R
 
 class HomeFragment : Fragment() {
 

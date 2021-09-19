@@ -1,4 +1,4 @@
-package com.target.app.movies
+package com.test.app.movies
 
 import org.junit.Test
 

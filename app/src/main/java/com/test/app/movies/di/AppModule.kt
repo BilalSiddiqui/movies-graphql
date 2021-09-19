@@ -1,4 +1,4 @@
-package com.target.app.movies.di
+package com.test.app.movies.di
 
 import dagger.Module
 import dagger.hilt.InstallIn

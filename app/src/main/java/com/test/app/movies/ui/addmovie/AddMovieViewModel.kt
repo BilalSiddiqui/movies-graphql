@@ -1,4 +1,4 @@
-package com.target.app.movies.ui.addmovie
+package com.test.app.movies.ui.addmovie
 
 import androidx.lifecycle.ViewModel
 

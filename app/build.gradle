@@ -4,6 +4,7 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'com.apollographql.apollo'
 }
 
 android {
@@ -11,7 +12,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.target.app.movies"
+        applicationId "com.test.app.movies"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -32,6 +33,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    apollo {
+        generateKotlinModels.set(true)
     }
 }
 
@@ -59,4 +63,8 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:$fragmentKtx"
     implementation("androidx.activity:activity-ktx:$activityKtx")
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodelKtx"
+
+    implementation "com.apollographql.apollo:apollo-runtime:2.5.9"
+    implementation "com.apollographql.apollo:apollo-coroutines-support:2.5.9"
+
 }

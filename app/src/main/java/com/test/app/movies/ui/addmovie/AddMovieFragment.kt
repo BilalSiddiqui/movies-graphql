@@ -1,4 +1,4 @@
-package com.target.app.movies.ui.addmovie
+package com.test.app.movies.ui.addmovie
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.target.app.movies.R
+import androidx.fragment.app.viewModels
+import com.test.app.movies.R
+import com.test.app.movies.ui.home.HomeViewModel
 
 class AddMovieFragment : Fragment() {
 
@@ -14,7 +16,7 @@ class AddMovieFragment : Fragment() {
         fun newInstance() = AddMovieFragment()
     }
 
-    private lateinit var viewModel: AddMovieViewModel
+    private val viewModel: AddMovieViewModel by   viewModels<AddMovieViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +25,5 @@ class AddMovieFragment : Fragment() {
         return inflater.inflate(R.layout.add_movie_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(AddMovieViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

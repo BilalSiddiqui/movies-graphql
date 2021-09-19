@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.test.app.movies.R
 import com.test.app.movies.ui.home.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AddMovieFragment : Fragment() {
 
     companion object {

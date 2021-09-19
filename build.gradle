@@ -52,4 +52,5 @@ ext{
     viewmodelKtx = '2.3.1'
     nav_version='2.3.5'
     core_ktx='1.6.0'
+    timber = '4.7.1'
 }

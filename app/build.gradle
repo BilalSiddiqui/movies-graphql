@@ -37,6 +37,10 @@ android {
     apollo {
         generateKotlinModels.set(true)
     }
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -63,8 +67,9 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:$fragmentKtx"
     implementation("androidx.activity:activity-ktx:$activityKtx")
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodelKtx"
-
+    implementation "com.jakewharton.timber:timber:$timber"
     implementation "com.apollographql.apollo:apollo-runtime:2.5.9"
     implementation "com.apollographql.apollo:apollo-coroutines-support:2.5.9"
+
 
 }

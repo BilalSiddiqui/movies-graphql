@@ -6,4 +6,7 @@
     <string name="season">Seasons:</string>
     <string name="tv_show">Tv Show</string>
     <string name="seasons">Seasons</string>
+    <string name="fill_mandatory">Please fill this field</string>
+    <string name="add_new_tv_show">Add new TV show</string>
+    <string name="show_list_of_added_tv_shows">Show List of Added Tv Shows</string>
 </resources>
